@@ -1,0 +1,214 @@
+/*CARRUSEL*/
+/*el porcentaje que representa la imagen dependetra de cuantas imagenes haya (=100%/nro de imag)*/
+/*los elementos html no requieren de ".", las clases si*/
+
+/*1. poner todas las clases y elementos en el css)*/
+
+*{ /*eso es el universal de html <!DOCTYPE html>
+    <html lang="en">
+    <head>*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(243, 218, 194);
+    overflow-x: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: rgb(37, 37, 37);
+    color: aliceblue;
+    padding: 16px 20px;
+    position: relative; 
+    margin-bottom: 10px;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 15px
+}
+
+/*.nav-links li{ /*li= lista
+    margin: 0 15px;
+}*/
+
+.nav-links a{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 18px;
+}
+
+.nav-links a:hover{
+    color: brown;
+}
+
+.hamburguer{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(234, 237, 240);
+    margin: 4px 0px;
+}
+
+@media (max-width:840px){
+    nav{
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(37, 37, 37);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hamburguer{
+        display: flex;
+    }
+
+    .nav-links.show{
+        display: flex;
+        background-color: rgb(37, 37, 37);
+    }
+}
+
+
+
+
+
+
+
+
+.carrusel{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    /*padding: 4px;*/
+
+}
+
+.grande{
+    width: 200%;
+    /*background-color: rgb(243, 218, 194);*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 6px;*/
+    border-radius: 20px;
+
+    transition: all 0.8s;
+
+}
+
+
+img{
+    width: 40%;
+    margin: 4px 6px; /*eje vertical y horizontal respectivamente*/
+
+}
+
+.puntos{
+    list-style: none; /*eliminar las viñetas de la lista*/
+    width: 100%;
+    padding: 6px; /*separarlo de las imagenes*/
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+
+}
+
+
+.punto-inactivo{
+    background-color: rgb(243, 218, 194);
+    width: 15px; /*aumentar tamaño*/
+    height: 15px;
+    margin: 8px; /*separa los puntos entre si*/
+    border-radius: 50%;
+
+}
+
+.punto-activo{ 
+    background-color: rgb(206, 152, 102);
+    width: 15px; /*aumentar tamaño*/
+    height: 15px;
+    margin: 8px; /*separa los puntos entre si*/
+    border: 4px solid rgb(245, 202, 163);
+    border-radius: 50%;
+
+}
+
+/*se puede afectar como se ve un elemento al quitarle y agregarle clases*/
+
+
+
+.cards-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: aliceblue;
+    margin: 16px 40px;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.card.img-cont{
+    width: 90%;
+    height: 250px;
+    background-color: black;
+    border-radius: 16px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.card img{
+    width: 240px;
+    height: 240px;
+}
+
+.card p{
+    margin: 24px ;
+}
+
+.card button{
+    background-color: rgb(84, 109, 77);
+    font-size: 26px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
