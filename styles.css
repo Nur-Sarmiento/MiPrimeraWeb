@@ -13,17 +13,26 @@
 }
 
 body{
-    background-color: rgb(243, 218, 194);
+    background-color: rgb(36, 36, 36);
     overflow-x: hidden;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.titulo{
+    color: rgb(234, 237, 240);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
 header{
-    background-color: rgb(37, 37, 37);
-    color: aliceblue;
-    padding: 16px 20px;
+    background-color: rgb(234, 237, 240);
+    color: rgb(36, 36, 36);
+    padding: 10px 16px;
     position: relative; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
 }
 
@@ -50,12 +59,13 @@ h1{
 
 .nav-links a{
     text-decoration: none;
-    color:aliceblue;
+    color:rgb(36, 36, 36);
     font-size: 18px;
+    font-weight: bold;
 }
 
 .nav-links a:hover{
-    color: brown;
+    color: rgb(132, 125, 134);
 }
 
 .hamburguer{
@@ -106,7 +116,7 @@ h1{
 
 .carrusel{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(234, 237, 240);
     border-radius: 20px;
     /*padding: 4px;*/
 
@@ -117,7 +127,7 @@ h1{
     /*background-color: rgb(243, 218, 194);*/
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    
     align-items: center;
     /*padding: 6px;*/
     border-radius: 20px;
@@ -128,7 +138,7 @@ h1{
 
 
 img{
-    width: 40%;
+    width: 49%;
     margin: 4px 6px; /*eje vertical y horizontal respectivamente*/
 
 }
@@ -136,7 +146,7 @@ img{
 .puntos{
     list-style: none; /*eliminar las viñetas de la lista*/
     width: 100%;
-    padding: 6px; /*separarlo de las imagenes*/
+    padding: 3px; /*separarlo de las imagenes*/
     
     display: flex;
     flex-flow: row nowrap;
@@ -148,7 +158,7 @@ img{
 
 
 .punto-inactivo{
-    background-color: rgb(243, 218, 194);
+    background-color: rgb(146, 146, 146);
     width: 15px; /*aumentar tamaño*/
     height: 15px;
     margin: 8px; /*separa los puntos entre si*/
@@ -157,18 +167,33 @@ img{
 }
 
 .punto-activo{ 
-    background-color: rgb(206, 152, 102);
+    background-color: rgb(22, 22, 22);
     width: 15px; /*aumentar tamaño*/
     height: 15px;
     margin: 8px; /*separa los puntos entre si*/
-    border: 4px solid rgb(245, 202, 163);
+    border: 4px solid rgb(146, 146, 146);
     border-radius: 50%;
 
 }
 
 /*se puede afectar como se ve un elemento al quitarle y agregarle clases*/
 
+.titulo1{
+    color: rgb(234, 237, 240);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
 
+.titulo-card{
+    color: rgb(37, 37, 37);
+    font-size: 20px;
+    text-align: center;
+
+}
 
 .cards-container{
     display: flex;
@@ -206,9 +231,18 @@ img{
 }
 
 .card button{
-    background-color: rgb(84, 109, 77);
-    font-size: 26px;
+    background-color: rgb(26, 26, 26);
+    font-size: 20px;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 20px;
+    border: 0cap;
+    transition: .5s;
+    color: rgb(234, 237, 240);
+}
+
+.card button:hover{
+    transform: scale(1.1);
+    background-color:rgb(132, 125, 134) ;
+    color:rgb(26, 26, 26)
 }
 
